@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ManageTournament</string>
+    <string name="welcome">Welcome to your tournament manager</string>
+
+    <string name="email">Enter your email</string>
+    <string name="register_user">REGISTER</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="sign_in">Already Registered? Sign In</string>
+    <string name="register_here">Please Register</string>
+
+
+    <string name="sign_up">Do not have account? Click here to register</string>
+    <string name="Sign_in">SIGN IN</string>
+    <string name="login_here">Please login</string>
+
+    <string name="large_text">Large text</string>
+    <string name="logout">LOGOUT</string>
+</resources>

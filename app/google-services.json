@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "991581574592",
+    "firebase_url": "https://managetournament-54fa0.firebaseio.com",
+    "project_id": "managetournament-54fa0",
+    "storage_bucket": "managetournament-54fa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991581574592:android:2ce0d02abb54dd96",
+        "android_client_info": {
+          "package_name": "com.apps.managetournament"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991581574592-jeu5vbqe1ci0qjigpij6gmg5ccugufls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChdk20lt6uuzbEeHDM94cevlMOHwepiV8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
