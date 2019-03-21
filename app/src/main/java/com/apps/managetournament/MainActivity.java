@@ -18,10 +18,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button register;
+    private Button register,signIN;
     private EditText user_email;
     private EditText user_password;
-    private TextView signIN;
+    private EditText confirm_user_password;
+
 
     private FirebaseAuth mFirebaseAuth;
 
@@ -30,16 +31,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        register = findViewById(R.id.register);
-        user_email = findViewById(R.id.user_email);
-        user_password = findViewById(R.id.user_password);
-        signIN = findViewById(R.id.SingIN);
+        register = findViewById(R.id.register_sign_up_button);
+        user_email = findViewById(R.id.register_email);
+        user_password = findViewById(R.id.register_password);
+        confirm_user_password = findViewById(R.id.register_confirm_password);
+        signIN = findViewById(R.id.SignIN);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         if(mFirebaseAuth.getCurrentUser() != null){
             //profile activity here. if somebody already login
             finish();
-            startActivity(new Intent(getApplicationContext(),userProfile.class));
+            startActivity(new Intent(getApplicationContext(), userActivity.class));
         }
 
         register.setOnClickListener(this);
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(MainActivity.this, "Successful Registration",
                                     Toast.LENGTH_LONG).show();
                             finish();
-                            startActivity(new Intent(getApplicationContext(),userProfile.class));
+                            startActivity(new Intent(getApplicationContext(), userActivity.class));
                         } if (!task.isSuccessful()){
                           Toast.makeText(MainActivity.this, "Registration Not Successful",
                                   Toast.LENGTH_LONG).show();
@@ -96,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // End this activity and start an other one
             // Uses less battery. Mention this in the report
             finish();
-            startActivity(new Intent(this,Login.class));
+            startActivity(new Intent(this, LoginActivity.class));
         }
     }
 }

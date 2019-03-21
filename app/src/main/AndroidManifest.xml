@@ -7,10 +7,15 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/welcome"
+        android:label="Welcome"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PlayerActivity"></activity>
+        <activity android:name=".TeamActivity" />
+        <activity android:name=".MatchActivity" />
+        <activity android:name=".showInformation" />
+        <activity android:name=".TournamentActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,8 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".userProfile"/>
-        <activity android:name=".Login" />
+        <activity android:name=".userActivity" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

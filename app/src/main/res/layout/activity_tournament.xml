@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
-    android:gravity="top"
+    android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingTop="10dp"
@@ -16,7 +16,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="450dp"
         app:srcCompat="@drawable/footy" />
 
 
@@ -36,8 +36,7 @@
             android:maxLines="1"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textIsSelectable="false"
-            android:paddingTop="50dp"/>
+            android:textIsSelectable="false" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -68,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@color/light_green"
+        android:onClick="signInExistingUser"
         android:text="@string/action_sign_in_short"
         android:textColor="@color/white"
         android:textStyle="bold" />

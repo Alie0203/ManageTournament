@@ -15,8 +15,7 @@
         android:id="@+id/userpro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
         android:background="@color/common_google_signin_btn_text_dark_pressed"
         android:orientation="vertical">
 
@@ -30,33 +29,25 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
-            android:id="@+id/fullName"
+            android:id="@+id/FullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:hint="@string/enterUserName"
-            android:importantForAutofill="no"
             android:inputType="text"
-            tools:targetApi="o" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="15dp"
             android:hint="@string/enterName"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            tools:targetApi="o" />
-
-        <Button
-            android:id="@+id/buttonSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="@string/save" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:inputType=""
+            android:autofillHints="" />
 
         <Button
             android:id="@+id/buttonlogOut"
@@ -65,16 +56,5 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="15dp"
             android:text="@string/logout" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="56dp"
-            android:background="@mipmap/ic_launcher_round"
-            android:clickable="true"
-            app:srcCompat="@color/colorAccent" />
-
     </LinearLayout>
 </RelativeLayout>

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "991581574592-9tt4onm5991qlm20skqjj7a9qs00s9vo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.managetournament",
+            "certificate_hash": "a6b33752876e0a040e1ae89386153964c7c7a1dd"
+          }
+        },
+        {
           "client_id": "991581574592-jeu5vbqe1ci0qjigpij6gmg5ccugufls.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991581574592-jeu5vbqe1ci0qjigpij6gmg5ccugufls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

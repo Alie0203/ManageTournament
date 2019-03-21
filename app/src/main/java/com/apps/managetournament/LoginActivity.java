@@ -16,7 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button sign_in;         //Button to complete registration
     private EditText user_email;     //Email input
@@ -31,16 +31,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        sign_in = findViewById(R.id.SingIN);
-        user_email = findViewById(R.id.user_email);
-        user_password = findViewById(R.id.user_password);
-        register = findViewById(R.id.register);
+        sign_in = findViewById(R.id.login_sign_in_button);
+        user_email = findViewById(R.id.login_email);
+        user_password = findViewById(R.id.login_password);
+        register = findViewById(R.id.login_register_button);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         if(mFirebaseAuth.getCurrentUser() != null){
             //profile activity here. if somebody already login
             finish();
-            startActivity(new Intent(getApplicationContext(),userProfile.class));
+            startActivity(new Intent(getApplicationContext(), userActivity.class));
         }
 
         sign_in.setOnClickListener(this);
@@ -75,9 +75,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                                if (task.isSuccessful()){
                                    // end this activity and Start profile activity
                                    finish();
-                                   startActivity(new Intent(getApplicationContext(),userProfile.class));
+                                   startActivity(new Intent(getApplicationContext(),userActivity.class));
                                }else{
-                                   Toast.makeText(Login.this,"Please enter valid email and password",Toast.LENGTH_LONG).show();
+                                   Toast.makeText(LoginActivity.this,"Please enter valid email and password",Toast.LENGTH_LONG).show();
                                }
                             }
                         }

@@ -15,4 +15,45 @@
 
     <string name="large_text">Large text</string>
     <string name="logout">LOGOUT</string>
+
+    <string name="enterName">Enter user name</string>
+    <string name="enterUserName">Enter your full name</string>
+
+    <string name="save">Save</string>
+    <string name="enterTname">Enter tournament name</string>
+    <string name="enterTlocation">Enter tournament location</string>
+    <string name="add_tournament">Add Tournament</string>
+    <string name="starting_date">Tournament start date</string>
+    <string name="end_date">Tournament end date</string>
+    <string name="selectType">Select Tournament Type</string>
+    <string name="todo">TODO</string>
+
+
+    <array name="asides">
+        <item>5 aside</item>
+        <item>7 aside</item>
+        <item>11 aside</item>
+    </array>
+
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_again">Confirm Password</string>
+    <string name="prompt_msg">Type a message</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_register">Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="action_send">Send</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">Password too short or does not match</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="sample_message">Hello!</string>
+
+
 </resources>
