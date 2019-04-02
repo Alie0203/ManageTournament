@@ -66,15 +66,5 @@
             android:layout_margin="15dp"
             android:text="@string/logout" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="56dp"
-            android:background="@mipmap/ic_launcher_round"
-            android:clickable="true"
-            app:srcCompat="@color/colorAccent" />
-
     </LinearLayout>
 </RelativeLayout>

@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -24,7 +23,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView register;        //Link to take registered users from the registration page to the
                                       //Login activity page
 
-    private FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth FirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +35,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         user_password = findViewById(R.id.login_password);
         register = findViewById(R.id.login_register_button);
 
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        if(mFirebaseAuth.getCurrentUser() != null){
+        FirebaseAuth = FirebaseAuth.getInstance();
+       /* if(FirebaseAuth.getCurrentUser() != null){
             //profile activity here. if somebody already login
             finish();
-            startActivity(new Intent(getApplicationContext(), userActivity.class));
-        }
+            startActivity(new Intent(getApplicationContext(), MainActivity.class)); // will be replaced by main menu
+        }*/
 
         sign_in.setOnClickListener(this);
         register.setOnClickListener(this);
@@ -67,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     // try to add progress dialog and start here
 
-        mFirebaseAuth.signInWithEmailAndPassword(email,password)
+        FirebaseAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -75,7 +74,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                if (task.isSuccessful()){
                                    // end this activity and Start profile activity
                                    finish();
-                                   startActivity(new Intent(getApplicationContext(),userActivity.class));
+                                   startActivity(new Intent(getApplicationContext(), organiserMenuActivity.class));
                                }else{
                                    Toast.makeText(LoginActivity.this,"Please enter valid email and password",Toast.LENGTH_LONG).show();
                                }

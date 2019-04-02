@@ -20,12 +20,13 @@
     <string name="enterUserName">Enter your full name</string>
 
     <string name="save">Save</string>
-    <string name="enterTname">Enter tournament name</string>
-    <string name="enterTlocation">Enter tournament location</string>
+    <string name="tournament_name">Enter tournament name</string>
+    <string name="tournament_location">Enter tournament location</string>
     <string name="add_tournament">Add Tournament</string>
     <string name="starting_date">Tournament start date</string>
     <string name="end_date">Tournament end date</string>
     <string name="selectType">Select Tournament Type</string>
+    <string name="back_to_menu">Back to menu</string>
     <string name="todo">TODO</string>
 
 
@@ -54,6 +55,31 @@
         completions."
     </string>
     <string name="sample_message">Hello!</string>
+    <string name="title_activity_user_navigation">UserNavigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+
+    <string name="open_navigation_drawer">Open Navigation Drawer</string>
+    <string name="close_navigation_drawer">Close Navigation Drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_home_team_s_name_here">Enter home team\'s name here</string>
+    <string name="enter_away_team_s_name_here">Enter away team\'s name here</string>
+    <string name="view_info">view_info</string>
+    <string name="select_start_data">Start date</string>
+    <string name="select_end_data">End date</string>
+    <string name="view_your_tournaments">View your tournaments</string>
+    <string name="click_below_to_select_dates">Click below to select dates</string>
 
 
 </resources>

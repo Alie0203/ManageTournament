@@ -11,6 +11,11 @@ public class Tournament {
     String tournamentType;
     String id;
 
+    public Tournament() {
+        // Public constructor without arguments is needed when
+        // retrieving data
+    }
+
     public Tournament(String tournamentName, String tournamentLocation, String startDate, String endDate, String tournamentType, String id) {
         this.tournamentName = tournamentName;
         this.tournamentLocation = tournamentLocation;

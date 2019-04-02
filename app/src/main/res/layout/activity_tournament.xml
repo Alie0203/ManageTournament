@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGreen"
-    android:gravity="bottom"
+    android:gravity="top"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingTop="10dp"
     android:paddingRight="10dp"
     android:paddingBottom="10dp"
+    android:clickable="true"
     tools:context=".TournamentActivity">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        app:srcCompat="@drawable/footy" />
-
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ball" />
 
 
     <android.support.design.widget.TextInputLayout
@@ -27,12 +27,12 @@
         android:textColorHint="@color/white">
 
         <AutoCompleteTextView
-            android:id="@+id/login_email"
+            android:id="@+id/tournament_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/prompt_email"
+            android:hint="@string/tournament_name"
             android:imeOptions="actionNext"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:maxLines="1"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -46,42 +46,100 @@
         android:textColorHint="@color/white">
 
         <EditText
-            android:id="@+id/login_password"
+            android:id="@+id/tournament_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/prompt_password"
+            android:hint="@string/tournament_location"
             android:imeActionId="100"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionUnspecified"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:maxLines="1"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
     </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/login_sign_in_button"
+    <TextView
+        android:id="@+id/date_selection_message"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
+        android:text="@string/click_below_to_select_dates"
+        android:background="@color/white"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@color/light_green"
-        android:onClick="signInExistingUser"
-        android:text="@string/action_sign_in_short"
-        android:textColor="@color/white"
+        android:textColor="@color/lightBlue"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+    <Button
+        android:id="@+id/select_start_date"
+        style="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="@string/select_start_data"
+        android:textColor="@color/lightBlue"
+        android:onClick="setDate"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/login_register_button"
+        android:id="@+id/select_end_date"
+        style="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/select_end_data"
+        android:layout_margin="6dp"
+        android:textColor="@color/lightBlue"
+        android:onClick="setDate"
+        android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/view_info"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@color/white"
-        android:onClick="registerNewUser"
-        android:text="@string/action_register"
-        android:textColor="@color/green"
+        android:onClick="viewTournaments"
+        android:text="@string/view_your_tournaments"
+        android:textColor="@color/lightBlue"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/add_tournament"
+        style="?android:textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:text="@string/add_tournament"
+        android:textColor="@color/lightBlue"
+        android:onClick="newTournament"
+        android:textStyle="bold"
+
+        tools:ignore="OnClick" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
 
 </LinearLayout>

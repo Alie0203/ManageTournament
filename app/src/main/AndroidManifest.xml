@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.apps.managetournament">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Welcome"
+        android:icon="@drawable/ball"
+        android:label="Organiser"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".PlayerActivity"></activity>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".PlayerActivity" />
         <activity android:name=".TeamActivity" />
         <activity android:name=".MatchActivity" />
-        <activity android:name=".showInformation" />
+        <activity android:name=".organiserMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity android:name=".TournamentActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -23,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".userActivity" />
         <activity android:name=".LoginActivity" />
     </application>
 
